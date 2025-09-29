@@ -1,8 +1,5 @@
+import { datapacks } from '@/data/datapacks';
 import { BookOpen } from 'lucide-react';
-
-const datapacks = [
-  { id: 'stellarity', name: 'Stellarity 5.0', description: `Un datapack axé sur le changement la dimension de l'End et l'ajout de nouvelles mécaniques de jeu pour enrichir l'expérience de survie.` },
-];
 
 export default function WikiDatapackChoice() {
   return (

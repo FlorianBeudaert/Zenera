@@ -13,3 +13,9 @@
   --color-primary-hover: #936FF8FF;
   --color-secondary: #a855f7;
 }
+
+.img-minecraft {
+  width: 64px;
+  height: 64px;
+  image-rendering: pixelated;
+}
