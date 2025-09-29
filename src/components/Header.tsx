@@ -4,7 +4,7 @@ import { Book, Menu } from 'lucide-react';
 
 const navLinks = [
     { href: '/', label: 'Accueil' },
-    { href: '/guides', label: 'Guides' },
+    { href: '/wiki', label: 'Wiki' },
     { href: '/launcher', label: 'Launcher' },
 ];
 

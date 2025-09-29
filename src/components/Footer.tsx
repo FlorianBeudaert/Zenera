@@ -5,7 +5,7 @@ const sections = [
         title: 'Navigation',
         links: [
             { label: 'Accueil', href: '/' },
-            { label: 'Guides', href: '/guides' },
+            { label: 'Wiki', href: '/wiki' },
             { label: 'Launcher', href: '/launcher' },
         ],
     },
