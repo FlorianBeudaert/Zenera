@@ -22,7 +22,7 @@ export default function Home() {
                       </span>
                   </h1>
                   <p className="text-xl md:text-2xl text-gray-600 mb-8 leading-relaxed max-w-3xl mx-auto">
-                      Le wiki pour avoir des informations sur les datapacks de la survie Minecraft crées par Girlsss et
+                      Le wiki pour avoir des informations sur les datapacks de la survie Minecraf des Girlsss et
                       la possibilité de télécharger le launcher minecraft custom pour y jouer facilement.
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4 justify-center">

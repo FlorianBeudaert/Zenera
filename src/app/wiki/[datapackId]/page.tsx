@@ -38,14 +38,21 @@ export default function WikiDatapackPage({ params }: { params: { datapackId: str
                                   >
                                       <div className="flex flex-col items-center w-full">
                                           {item.icon ? (
-                                              <img
-                                                  src={item.icon}
-                                                  alt={item.name}
-                                                  className="img-minecraft mb-5 shadow-lg rounded-lg p-1"
-                                              />
+																						<img
+																							src={item.icon}
+																							alt={item.name}
+																							className="img-minecraft mb-5 shadow-lg rounded-lg p-1 object-contain max-h-60"
+																						/>
                                           ) : null}
                                           <h3 className="text-2xl font-bold text-gray-900 mb-2 text-center">{item.name}</h3>
-                                          <p className="text-gray-600 text-center mb-3">{item.description}</p>
+																					<p className="text-gray-600 text-center mb-3">
+																						{item.description?.split('\n').map((line, i) => (
+																							<span key={i}>
+																								{line}
+																								<br />
+																							</span>
+																						))}
+																					</p>
                                             {item.bonus && (
                                                 <div
                                                     className="text-sm text-green-700 bg-green-100 rounded px-3 py-1 mb-2 w-full">

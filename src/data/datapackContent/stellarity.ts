@@ -139,6 +139,7 @@ export type Ingredient = {
         obtention: 'Altar of the Accursed.',
       },
     ],
+
     armes: [
       {
         name: 'Shulker Sword',
@@ -190,13 +191,25 @@ export type Ingredient = {
       {
         name: 'Crest of The End',
         description: 'Bouclier qui permet de stocker une partie des dégâts bloqués et d’augmenter la prochaine attaque jusqu’à +45%. Bloquer une attaque de hache déclenche une explosion infligeant 14 dégâts et applique Jinx aux ennemis proches.',
-        ingredients: [
+        icon: '/icons/stellarity/weapons/crest_of_the_end.png',
+				ingredients: [
           { name: 'Shield', quantity: 1 },
           { name: 'Netherite Ingot', quantity: 1 },
           { name: 'Enderite Upgrade Smithing Template', quantity: 1 },
         ],
         obtention: 'Altar of the Accursed.',
       },
+			{
+				name: 'Starstruck Shield',
+				description: 'Prendre des dégâts fait tomber 3 étoiles autour du joueur, infligeant 4 coeurs (50% pénétration d’armure) chacune. Les étoiles ignorent l’immunité et fonctionnent même en grotte.\n\n Obtenable à 33% sur l’Impératrice de Lumière, uniquement si tuée dans l’End ou l’Overworld de nuit.',
+				obtention: 'Boss Reward (Empress of Light)',
+			},
+			{
+				name: 'Copper Elektra Shield',
+				description: `Accumule une charge toutes les 7s (14s pour la dernière). S'accroupir libère la charge : inflige 4 cœurs aux ennemis touchés et te projette de 7 blocs en avant. Dissipe les projectiles de shulker. Les creepers touchés ont 25% de chance d'être chargés.`,
+				obtention: 'Vindicators in Strongholds (8%) & End Villages.',
+			}
+
     ],
     armures: [
       {
