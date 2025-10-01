@@ -46,7 +46,7 @@ export default function WikiDatapackPage({ params }: { params: Promise<{ datapac
 												<img
 													src={item.icon}
 													alt={item.name}
-													className="img-minecraft mb-5 shadow-lg rounded-lg p-1 object-contain max-h-60"
+													className="img-minecraft mb-5 shadow-lg rounded-lg p-1 object-contain max-h-60 bg-gray-300 border border-gray-400"
 												/>
 											) : null}
 											<h3 className="text-2xl font-bold text-gray-900 mb-2 text-center">{item.name}</h3>
@@ -58,11 +58,22 @@ export default function WikiDatapackPage({ params }: { params: Promise<{ datapac
 													</span>
 												))}
 											</p>
+											{item.setbonus && (
+												<div className="text-sm text-blue-700 bg-blue-100 rounded px-3 py-1 mb-2 w-full">
+													Full Set : {item.setbonus}
+												</div>
+											)}
 											{item.bonus && (
 												<div className="text-sm text-green-700 bg-green-100 rounded px-3 py-1 mb-2 w-full">
 													Bonus: {item.bonus}
 												</div>
 											)}
+											{item.malus && (
+												<div className="text-sm text-red-700 bg-red-100 rounded px-3 py-1 mb-2 w-full">
+													Malus: {item.malus}
+												</div>
+											)}
+
 										</div>
 										<div className="w-full mt-4">
 											{item.obtention && (

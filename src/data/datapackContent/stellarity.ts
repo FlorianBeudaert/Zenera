@@ -25,7 +25,9 @@ export type Item = {
 	name: string;
 	description?: string;
 	icon?: string;
+	setbonus?: string;
 	bonus?: string;
+	malus?: string;
 	obtention?: ObtentionSource[];
 };
 
@@ -36,6 +38,7 @@ export type DatapackContent = {
 	armures?: Item[];
 	biomes?: Item[];
 	food?: Item[];
+	potions?: Item[];
 };
 
 const stellarityContent: DatapackContent = {
@@ -337,219 +340,252 @@ const stellarityContent: DatapackContent = {
 			name: 'Copper Elektra Shield',
 			description: `Accumule une charge toutes les 7s (14s pour la dernière). S'accroupir libère la charge: inflige 4 cœurs aux ennemis touchés et te projette de 7 blocs en avant. Dissipe les projectiles de shulker. Les creepers touchés ont 25% de chance d'être chargés.`,
 			obtention: [
-				{ type: ObtentionType.MOB, name: 'Vindicator', chance: '8%' },
-				{ type: ObtentionType.PLACE, placeType: 'Village', name: 'End Village' }
+				{
+					type: ObtentionType.MOB,
+					name: 'Vindicator (Stronghold)',
+					chance: '8%'
+				},
+				{
+					type: ObtentionType.PLACE,
+					placeType: 'End Village',
+					name: 'Armorer Villager'
+				}
 			]
-		}
+		},
 	],
 
 	armures: [
 		{
-			name: 'Hallowed Helmet',
-			description: 'Augmente la distance de chute sûre de 1 bloc.',
-			icon: '/icons/stellarity/armor/hallowed_helmet.png',
-			obtention: [
-				{
-					type: ObtentionType.CRAFTER,
-					crafterName: 'Altar Of The Accursed',
-					crafterIcon: '/icons/stellarity/block/altar_of_the_accursed.png',
-					crafterIngredients: [
-						{ name: 'Enderite Upgrade Smithing Template', quantity: 1 },
-						{ name: 'Hallowed Ingot', quantity: 4 },
-						{ name: 'Netherite Helmet', quantity: 1 },
-					]
-				}
-			]
+		  name: 'Hallowed Helmet',
+		  description: '+1 résistance au recul & +1 bloc de chute sûre.',
+		  bonus: '+1 résistance au recul, +1 bloc de chute sûre.',
+		  setbonus: 'Permet d’esquiver les attaques, annulant tous les dégâts et le recul.',
+		  icon: '/icons/stellarity/armor/hallowed_helmet.png',
+		  obtention: [
+		    {
+		      type: ObtentionType.CRAFTER,
+		      crafterName: 'Altar Of The Accursed',
+		      crafterIcon: '/icons/stellarity/block/altar_of_the_accursed.png',
+		      crafterIngredients: [
+		        { name: 'Enderite Upgrade Smithing Template', quantity: 1 },
+		        { name: 'Hallowed Ingot', quantity: 4 },
+		        { name: 'Netherite Helmet', quantity: 1 },
+		      ]
+		    }
+		  ]
 		},
 		{
-			name: 'Hallowed Chestplate',
-			description: 'Augmente la distance de chute sûre de 1 bloc.',
-			icon: '/icons/stellarity/armor/hallowed_chestplate.png',
-			obtention: [
-				{
-					type: ObtentionType.CRAFTER,
-					crafterName: 'Altar Of The Accursed',
-					crafterIcon: '/icons/stellarity/block/altar_of_the_accursed.png',
-					crafterIngredients: [
-						{ name: 'Enderite Upgrade Smithing Template', quantity: 1 },
-						{ name: 'Hallowed Ingot', quantity: 4 },
-						{ name: 'Netherite Chestplate', quantity: 1 },
-					]
-				}
-			]
+		  name: 'Hallowed Chestplate',
+		  description: '+1 bloc de chute sûre, +1 résistance au recul & +15% vitesse d’attaque.',
+		  bonus: '+1 bloc de chute sûre, +1 résistance au recul, +15% vitesse d’attaque.',
+		  setbonus: 'Permet d’esquiver les attaques, annulant tous les dégâts et le recul.',
+		  icon: '/icons/stellarity/armor/hallowed_chestplate.png',
+		  obtention: [
+		    {
+		      type: ObtentionType.CRAFTER,
+		      crafterName: 'Altar Of The Accursed',
+		      crafterIcon: '/icons/stellarity/block/altar_of_the_accursed.png',
+		      crafterIngredients: [
+		        { name: 'Enderite Upgrade Smithing Template', quantity: 1 },
+		        { name: 'Hallowed Ingot', quantity: 4 },
+		        { name: 'Netherite Chestplate', quantity: 1 },
+		      ]
+		    }
+		  ]
 		},
 		{
-			name: 'Hallowed Leggings',
-			description: 'Augmente la force du saut de 15% et la vitesse en sneaking de 25%.',
-			icon: '/icons/stellarity/armor/hallowed_leggings.png',
-			obtention: [
-				{
-					type: ObtentionType.CRAFTER,
-					crafterName: 'Altar Of The Accursed',
-					crafterIcon: '/icons/stellarity/block/altar_of_the_accursed.png',
-					crafterIngredients: [
-						{ name: 'Enderite Upgrade Smithing Template', quantity: 1 },
-						{ name: 'Hallowed Ingot', quantity: 4 },
-						{ name: 'Netherite Leggings', quantity: 1 },
-					]
-				}
-			]
+		  name: 'Hallowed Leggings',
+		  description: '+25% vitesse en sneaking, +1 résistance au recul & +15% force de saut.',
+		  bonus: '+25% vitesse en sneaking, +1 résistance au recul, +15% force de saut.',
+		  setbonus: 'Permet d’esquiver les attaques, annulant tous les dégâts et le recul.',
+		  icon: '/icons/stellarity/armor/hallowed_leggings.png',
+		  obtention: [
+		    {
+		      type: ObtentionType.CRAFTER,
+		      crafterName: 'Altar Of The Accursed',
+		      crafterIcon: '/icons/stellarity/block/altar_of_the_accursed.png',
+		      crafterIngredients: [
+		        { name: 'Enderite Upgrade Smithing Template', quantity: 1 },
+		        { name: 'Hallowed Ingot', quantity: 4 },
+		        { name: 'Netherite Leggings', quantity: 1 },
+		      ]
+		    }
+		  ]
 		},
 		{
-			name: 'Hallowed Boots',
-			description: `Augmente la vitesse de déplacement de 10% et la hauteur de marche de 0,5.`,
-			bonus: 'Bonus de set complet : Protection sacrée pendant 5s après dégâts, feu et eau 8s, boost vitesse temporaire, esquive (cd 25s).',
-			icon: '/icons/stellarity/armor/hallowed_boots.png',
-			obtention: [
-				{
-					type: ObtentionType.CRAFTER,
-					crafterName: 'Altar Of The Accursed',
-					crafterIcon: '/icons/stellarity/block/altar_of_the_accursed.png',
-					crafterIngredients: [
-						{ name: 'Enderite Upgrade Smithing Template', quantity: 1 },
-						{ name: 'Hallowed Ingot', quantity: 4 },
-						{ name: 'Netherite Boots', quantity: 1 },
-					]
-				}
-			]
+		  name: 'Hallowed Boots',
+		  description: '+10% vitesse, +0.5 hauteur de marche & +1 résistance au recul.',
+		  bonus: '+10% vitesse, +0.5 hauteur de marche, +1 résistance au recul.',
+		  setbonus: 'Permet d’esquiver les attaques, annulant tous les dégâts et le recul.',
+		  icon: '/icons/stellarity/armor/hallowed_boots.png',
+		  obtention: [
+		    {
+		      type: ObtentionType.CRAFTER,
+		      crafterName: 'Altar Of The Accursed',
+		      crafterIcon: '/icons/stellarity/block/altar_of_the_accursed.png',
+		      crafterIngredients: [
+		        { name: 'Enderite Upgrade Smithing Template', quantity: 1 },
+		        { name: 'Hallowed Ingot', quantity: 4 },
+		        { name: 'Netherite Boots', quantity: 1 },
+		      ]
+		    }
+		  ]
 		},
 		{
-			name: 'Champion Helmet',
-			description: 'Augmente les dégâts de 10%.',
-			icon: '/icons/stellarity/armor/champion_helmet.png',
-			obtention: [
-				{
-					type: ObtentionType.CRAFTER,
-					crafterName: 'Altar Of The Accursed',
-					crafterIcon: '/icons/stellarity/block/altar_of_the_accursed.png',
-					crafterIngredients: [
-						{ name: 'Champion Ingot', quantity: 4 },
-						{ name: 'Netherite Helmet', quantity: 1 },
-					]
-				}
-			]
+		  name: 'Champion Helmet',
+		  description: '+0.8 résistance au recul & +2.5% dégâts d’attaque.',
+		  bonus: '+0.8 résistance au recul, +2.5% dégâts d’attaque.',
+		  setbonus: 'La colère du dragon vous envahit, augmentant les dégâts à chaque coup consécutif !',
+		  icon: '/icons/stellarity/armor/champion_helmet.png',
+		  obtention: [
+		    {
+		      type: ObtentionType.CRAFTER,
+		      crafterName: 'Altar Of The Accursed',
+		      crafterIcon: '/icons/stellarity/block/altar_of_the_accursed.png',
+		      crafterIngredients: [
+		        { name: 'Champion Ingot', quantity: 4 },
+		        { name: 'Netherite Helmet', quantity: 1 },
+		      ]
+		    }
+		  ]
 		},
 		{
-			name: 'Champion Chestplate',
-			description: 'Augmente les dégâts de 10%.',
-			icon: '/icons/stellarity/armor/champion_chestplate.png',
-			obtention: [
-				{
-					type: ObtentionType.CRAFTER,
-					crafterName: 'Altar Of The Accursed',
-					crafterIcon: '/icons/stellarity/block/altar_of_the_accursed.png',
-					crafterIngredients: [
-						{ name: 'Champion Ingot', quantity: 4 },
-						{ name: 'Netherite Chestplate', quantity: 1 },
-					]
-				}
-			]
+		  name: 'Champion Chestplate',
+		  description: '+2.5% dégâts d’attaque, +0.8 résistance au recul & +15% vitesse d’attaque.',
+		  bonus: '+2.5% dégâts d’attaque, +0.8 résistance au recul, +15% vitesse d’attaque.',
+		  setbonus: 'La colère du dragon vous envahit, augmentant les dégâts à chaque coup consécutif !',
+		  icon: '/icons/stellarity/armor/champion_chestplate.png',
+		  obtention: [
+		    {
+		      type: ObtentionType.CRAFTER,
+		      crafterName: 'Altar Of The Accursed',
+		      crafterIcon: '/icons/stellarity/block/altar_of_the_accursed.png',
+		      crafterIngredients: [
+		        { name: 'Champion Ingot', quantity: 4 },
+		        { name: 'Netherite Chestplate', quantity: 1 },
+		      ]
+		    }
+		  ]
 		},
 		{
-			name: 'Champion Leggings',
-			description: 'Augmente les dégâts de 10%.',
-			icon: '/icons/stellarity/armor/champion_leggings.png',
-			obtention: [
-				{
-					type: ObtentionType.CRAFTER,
-					crafterName: 'Altar Of The Accursed',
-					crafterIcon: '/icons/stellarity/block/altar_of_the_accursed.png',
-					crafterIngredients: [
-						{ name: 'Champion Ingot', quantity: 4 },
-						{ name: 'Netherite Leggings', quantity: 1 },
-					]
-				}
-			]
+		  name: 'Champion Leggings',
+		  description: '+2.5% dégâts d’attaque, +0.8 résistance au recul & +0.15 ratio balayage.',
+		  bonus: '+2.5% dégâts d’attaque, +0.8 résistance au recul, +0.15 ratio balayage.',
+		  setbonus: 'La colère du dragon vous envahit, augmentant les dégâts à chaque coup consécutif !',
+		  icon: '/icons/stellarity/armor/champion_leggings.png',
+		  obtention: [
+		    {
+		      type: ObtentionType.CRAFTER,
+		      crafterName: 'Altar Of The Accursed',
+		      crafterIcon: '/icons/stellarity/block/altar_of_the_accursed.png',
+		      crafterIngredients: [
+		        { name: 'Champion Ingot', quantity: 4 },
+		        { name: 'Netherite Leggings', quantity: 1 },
+		      ]
+		    }
+		  ]
 		},
 		{
-			name: 'Champion Boots',
-			description: 'Augmente les dégâts de 10%.',
-			bonus: 'Bonus de set complet : Jusqu’à +40% de dégâts en enchaînant les attaques (stack 6% par coup, 3s).',
-			icon: '/icons/stellarity/armor/champion_boots.png',
-			obtention: [
-				{
-					type: ObtentionType.CRAFTER,
-					crafterName: 'Altar Of The Accursed',
-					crafterIcon: '/icons/stellarity/block/altar_of_the_accursed.png',
-					crafterIngredients: [
-						{ name: 'Champion Ingot', quantity: 4 },
-						{ name: 'Netherite Boots', quantity: 1 },
-					]
-				}
-			]
+		  name: 'Champion Boots',
+		  description: '+2.5% dégâts d’attaque & +0.8 résistance au recul.',
+		  bonus: '+2.5% dégâts d’attaque, +0.8 résistance au recul.',
+		  setbonus: 'La colère du dragon vous envahit, augmentant les dégâts à chaque coup consécutif !',
+		  icon: '/icons/stellarity/armor/champion_boots.png',
+		  obtention: [
+		    {
+		      type: ObtentionType.CRAFTER,
+		      crafterName: 'Altar Of The Accursed',
+		      crafterIcon: '/icons/stellarity/block/altar_of_the_accursed.png',
+		      crafterIngredients: [
+		        { name: 'Champion Ingot', quantity: 4 },
+		        { name: 'Netherite Boots', quantity: 1 },
+		      ]
+		    }
+		  ]
 		},
 		{
-			name: 'Shulker Helmet',
-			description: 'Immunité à la Lévitation et Wither.',
-			icon: '/icons/stellarity/armor/shulker_helmet.png',
-			obtention: [
-				{
-					type: ObtentionType.CRAFTER,
-					crafterName: 'Altar Of The Accursed',
-					crafterIcon: '/icons/stellarity/block/altar_of_the_accursed.png',
-					crafterIngredients: [
-						{ name: 'Enderite Upgrade Smithing Template', quantity: 1 },
-						{ name: 'Shulker Shell', quantity: 4 },
-						{ name: 'Netherite Helmet', quantity: 1 },
-					]
-				}
-			]
+		  name: 'Shulker Helmet',
+		  description: 'Réduit la vitesse d’attaque et de déplacement de 3%.',
+		  malus: '-3% vitesse d’attaque & déplacement.',
+		  setbonus: 'Les Shulker Bullets traquent vos attaquants. Réduction de dégâts quand vous êtes entouré.',
+		  icon: '/icons/stellarity/armor/shulker_helmet.png',
+		  obtention: [
+		    {
+		      type: ObtentionType.CRAFTER,
+		      crafterName: 'Altar Of The Accursed',
+		      crafterIcon: '/icons/stellarity/block/altar_of_the_accursed.png',
+		      crafterIngredients: [
+		        { name: 'Enderite Upgrade Smithing Template', quantity: 1 },
+		        { name: 'Shulker Shell', quantity: 4 },
+		        { name: 'Netherite Helmet', quantity: 1 },
+		      ]
+		    }
+		  ]
 		},
 		{
-			name: 'Shulker Chestplate',
-			description: 'Immunité à la Lévitation et Wither.',
-			icon: '/icons/stellarity/armor/shulker_chestplate.png',
-			obtention: [
-				{
-					type: ObtentionType.CRAFTER,
-					crafterName: 'Altar Of The Accursed',
-					crafterIcon: '/icons/stellarity/block/altar_of_the_accursed.png',
-					crafterIngredients: [
-						{ name: 'Enderite Upgrade Smithing Template', quantity: 1 },
-						{ name: 'Shulker Shell', quantity: 4 },
-						{ name: 'Netherite Chestplate', quantity: 1 },
-					]
-				}
-			]
+		  name: 'Shulker Chestplate',
+		  description: 'Immunité à la Faiblesse. Réduit la vitesse d’attaque et de déplacement de 3%.',
+		  bonus: 'Immunité à la Faiblesse.',
+		  malus: '-3% vitesse d’attaque & déplacement.',
+		  setbonus: 'Les Shulker Bullets traquent vos attaquants. Réduction de dégâts quand vous êtes entouré.',
+		  icon: '/icons/stellarity/armor/shulker_chestplate.png',
+		  obtention: [
+		    {
+		      type: ObtentionType.CRAFTER,
+		      crafterName: 'Altar Of The Accursed',
+		      crafterIcon: '/icons/stellarity/block/altar_of_the_accursed.png',
+		      crafterIngredients: [
+		        { name: 'Enderite Upgrade Smithing Template', quantity: 1 },
+		        { name: 'Shulker Shell', quantity: 4 },
+		        { name: 'Netherite Chestplate', quantity: 1 },
+		      ]
+		    }
+		  ]
 		},
 		{
-			name: 'Shulker Leggings',
-			description: 'Immunité à la Lévitation et Wither.',
-			icon: '/icons/stellarity/armor/shulker_leggings.png',
-			obtention: [
-				{
-					type: ObtentionType.CRAFTER,
-					crafterName: 'Altar Of The Accursed',
-					crafterIcon: '/icons/stellarity/block/altar_of_the_accursed.png',
-					crafterIngredients: [
-						{ name: 'Enderite Upgrade Smithing Template', quantity: 1 },
-						{ name: 'Shulker Shell', quantity: 4 },
-						{ name: 'Netherite Leggings', quantity: 1 },
-					]
-				}
-			]
+		  name: 'Shulker Leggings',
+		  description: 'Immunité à la Lévitation. Réduit la vitesse d’attaque et de déplacement de 3%.',
+		  bonus: 'Immunité à la Lévitation.',
+		  malus: '-3% vitesse d’attaque & déplacement.',
+		  setbonus: 'Les Shulker Bullets traquent vos attaquants. Réduction de dégâts quand vous êtes entouré.',
+		  icon: '/icons/stellarity/armor/shulker_leggings.png',
+		  obtention: [
+		    {
+		      type: ObtentionType.CRAFTER,
+		      crafterName: 'Altar Of The Accursed',
+		      crafterIcon: '/icons/stellarity/block/altar_of_the_accursed.png',
+		      crafterIngredients: [
+		        { name: 'Enderite Upgrade Smithing Template', quantity: 1 },
+		        { name: 'Shulker Shell', quantity: 4 },
+		        { name: 'Netherite Leggings', quantity: 1 },
+		      ]
+		    }
+		  ]
 		},
 		{
-			name: 'Shulker Boots',
-			description: 'Immunité à la Lévitation et Wither.',
-			bonus: `Set complet : 50% de chance d’invoquer 3 Shulker Bullets alliés (4 dégâts + Lévitation II). Immunité Lévitation/Wither. Résistance I si entouré de 4+ mobs.`,
-			icon: '/icons/stellarity/armor/shulker_boots.png',
-			obtention: [
-				{
-					type: ObtentionType.CRAFTER,
-					crafterName: 'Altar Of The Accursed',
-					crafterIcon: '/icons/stellarity/block/altar_of_the_accursed.png',
-					crafterIngredients: [
-						{ name: 'Enderite Upgrade Smithing Template', quantity: 1 },
-						{ name: 'Shulker Shell', quantity: 4 },
-						{ name: 'Netherite Boots', quantity: 1 },
-					]
-				}
-			]
+		  name: 'Shulker Boots',
+		  description: 'Réduit la vitesse d’attaque et de déplacement de 3%.',
+		  malus: '-3% vitesse d’attaque & déplacement.',
+		  setbonus: 'Les Shulker Bullets traquent vos attaquants. Réduction de dégâts quand vous êtes entouré.',
+		  icon: '/icons/stellarity/armor/shulker_boots.png',
+		  obtention: [
+		    {
+		      type: ObtentionType.CRAFTER,
+		      crafterName: 'Altar Of The Accursed',
+		      crafterIcon: '/icons/stellarity/block/altar_of_the_accursed.png',
+		      crafterIngredients: [
+		        { name: 'Enderite Upgrade Smithing Template', quantity: 1 },
+		        { name: 'Shulker Shell', quantity: 4 },
+		        { name: 'Netherite Boots', quantity: 1 },
+		      ]
+		    }
+		  ]
 		},
 		{
 			name: 'Floral Helmet',
 			description: 'Réduit les dégâts de mêlée de 5%.',
+			malus: '-5% dégâts de mêlée.',
+			setbonus: `Tirer sur un ennemi fait éclore une fleur explosive (dégâts augmentent avec chaque flèche). Invisibilité en sneaking dans les hautes herbes.`,
 			icon: '/icons/stellarity/armor/floral_helmet.png',
 			obtention: [
 				{
@@ -567,6 +603,9 @@ const stellarityContent: DatapackContent = {
 		{
 			name: 'Floral Chestplate',
 			description: 'Flèches 25% plus rapides. -5% dégâts mêlée.',
+			malus: '-5% dégâts de mêlée.',
+			bonus: '+25% vitesse des flèches.',
+			setbonus: `Tirer sur un ennemi fait éclore une fleur explosive (dégâts augmentent avec chaque flèche). Invisibilité en sneaking dans les hautes herbes.`,
 			icon: '/icons/stellarity/armor/floral_chestplate.png',
 			obtention: [
 				{
@@ -584,6 +623,9 @@ const stellarityContent: DatapackContent = {
 		{
 			name: 'Floral Leggings',
 			description: '+10% dégâts flèches. -5% dégâts mêlée.',
+			malus: '-5% dégâts de mêlée.',
+			bonus: '+10% dégâts de flèches.',
+			setbonus: `Tirer sur un ennemi fait éclore une fleur explosive (dégâts augmentent avec chaque flèche). Invisibilité en sneaking dans les hautes herbes.`,
 			icon: '/icons/stellarity/armor/floral_leggings.png',
 			obtention: [
 				{
@@ -601,7 +643,8 @@ const stellarityContent: DatapackContent = {
 		{
 			name: 'Floral Boots',
 			description: '-5% dégâts mêlée.',
-			bonus: `Set complet : Tirer sur un ennemi fait éclore une fleur explosive (dégâts augmentent avec chaque flèche). Invisibilité en sneaking dans les hautes herbes.`,
+			malus: '-5% dégâts de mêlée.',
+			setbonus: `Tirer sur un ennemi fait éclore une fleur explosive (dégâts augmentent avec chaque flèche). Invisibilité en sneaking dans les hautes herbes.`,
 			icon: '/icons/stellarity/armor/floral_boots.png',
 			obtention: [
 				{
@@ -637,7 +680,332 @@ const stellarityContent: DatapackContent = {
 				{ type: ObtentionType.DONJON_REWARD }
 			]
 		},
+		{
+			name: 'Golden Chorus Fruit',
+			description: 'Nous ne connaissons pas encore les effets. À découvrir !',
+			icon: '/icons/stellarity/food/golden_chorus_fruit.png',
+			obtention: [
+				{
+					type: ObtentionType.CRAFTER,
+					crafterName: 'Cauldron Crafting',
+					crafterIcon: '/icons/stellarity/block/cauldron_crafting.png',
+					crafterIngredients: [
+						{ name: 'Chorus Fruit', quantity: 1 },
+						{ name: 'Gold Block', quantity: 1 },
+					]
+				},
+			]
+		},
+		{
+			name: 'Candied Chorus Fruit',
+			description: 'Nous ne connaissons pas encore les effets. À découvrir !',
+			icon: '/icons/stellarity/food/candied_chorus_fruit.png',
+			obtention: [
+				{
+					type: ObtentionType.CRAFTER,
+					crafterName: 'Cauldron Crafting',
+					crafterIcon: '/icons/stellarity/block/cauldron_crafting.png',
+					crafterIngredients: [
+						{ name: 'Chorus Fruit', quantity: 1 },
+						{ name: 'Sugar', quantity: 2 },
+					]
+				},
+			]
+		},
+		{
+			name: 'Fried Chorus Fruit',
+			description: 'Nous ne connaissons pas encore les effets. À découvrir !',
+			icon: '/icons/stellarity/food/fried_chorus_fruit.png',
+			obtention: [
+				{
+					type: ObtentionType.CRAFTER,
+					crafterName: 'Cauldron Crafting',
+					crafterIcon: '/icons/stellarity/block/cauldron_crafting.png',
+					crafterIngredients: [
+						{ name: 'Chorus Fruit', quantity: 1 },
+						{ name: 'Wheat', quantity: 1},
+						{ name: 'Blaze Powder', quantity: 1 },
+					]
+				},
+			]
+		},
+		{
+			name: 'Grilled Enderman Flesh',
+			description: 'Nous ne connaissons pas encore les effets. À découvrir !',
+			icon: '/icons/stellarity/food/grilled_enderman_flesh.png',
+			obtention: [
+				{
+					type: ObtentionType.CRAFTER,
+					crafterName: 'Cauldron Crafting',
+					crafterIcon: '/icons/stellarity/block/cauldron_crafting.png',
+					crafterIngredients: [
+						{ name: 'Enderman Flesh', quantity: 1 },
+						{ name: 'Blaze Powder', quantity: 1 },
+					]
+				},
+			]
+		},
+		{
+			name: 'Frozen Carpaccio',
+			description: 'Nous ne connaissons pas encore les effets. À découvrir !',
+			icon: '/icons/stellarity/food/frozen_carpaccio.png',
+			obtention: [
+				{
+					type: ObtentionType.CRAFTER,
+					crafterName: 'Cauldron Crafting',
+					crafterIcon: '/icons/stellarity/block/cauldron_crafting.png',
+					crafterIngredients: [
+						{ name: 'Enderman Flesh', quantity: 1 },
+						{ name: 'Ice', quantity: 1 },
+					]
+				},
+			]
+		},
+		{
+		  name: 'Chorus Pie',
+		  description: 'Consommer un Chorus Pie donne 8 points de faim et 4,8 points de saturation.',
+		  icon: '/icons/stellarity/food/chorus_pie.png',
+		  obtention: [
+		    {
+		      type: ObtentionType.CRAFTER,
+		      crafterName: 'Cauldron Crafting',
+		      crafterIcon: '/icons/stellarity/block/cauldron_crafting.png',
+		      crafterIngredients: [
+		        { name: 'Chorus Fruit', quantity: 1 },
+		        { name: 'Sugar', quantity: 1 },
+		        { name: 'Ender Egg', quantity: 1 },
+		      ]
+		    },
+		  ]
+		},
+		{
+		  name: 'Pho',
+		  description: `Consommer un Pho donne 13 points de faim et 20 points de saturation. Effets: Absorption (2:30), Force (2:30), Régénération (0:32).`,
+		  icon: '/icons/stellarity/food/pho.png',
+		  obtention: [
+		    {
+		      type: ObtentionType.CRAFTER,
+		      crafterName: 'Cauldron Crafting',
+		      crafterIcon: '/icons/stellarity/block/cauldron_crafting.png',
+		      crafterIngredients: [
+		        { name: 'Golden Chorus Fruit', quantity: 1 },
+		        { name: 'Bowl', quantity: 1 },
+		        { name: 'Grilled Enderman Flesh', quantity: 1 },
+		      ]
+		    },
+		  ]
+		},
+		{
+		  name: "Shepherd's Pie",
+		  description: `Consommer un Shepherd's Pie donne 20 points de faim et 20 points de saturation. Effets: Soin instantané III et Régénération II pendant 1min04.`,
+		  icon: '/icons/stellarity/food/shepherds_pie.png',
+		  obtention: [
+		    {
+		      type: ObtentionType.CRAFTER,
+		      crafterName: 'Cauldron Crafting',
+		      crafterIcon: '/icons/stellarity/block/cauldron_crafting.png',
+		      crafterIngredients: [
+		        { name: 'Shulker Body', quantity: 1 },
+		        { name: 'Golden Carrot', quantity: 1 },
+		        { name: 'Baked Potato', quantity: 1 },
+		        { name: 'Chorus Fruit', quantity: 2 },
+		      ]
+		    },
+		    {
+		      type: ObtentionType.PLACE,
+		      placeType: 'End Village',
+		      name: 'End Villager (Maître)'
+		    }
+		  ]
+		},
+		{
+		  name: 'Sushi',
+		  description: 'Consommer un Sushi donne 4 points de faim et 2,4 points de saturation.',
+		  icon: '/icons/stellarity/food/sushi.png',
+		  obtention: [
+		    {
+		      type: ObtentionType.CRAFTER,
+		      crafterName: 'Cauldron Crafting',
+		      crafterIcon: '/icons/stellarity/block/cauldron_crafting.png',
+		      crafterIngredients: [
+		        { name: 'Ender Koi', quantity: 1 },
+		        { name: 'Dried Kelp', quantity: 1 },
+		      ]
+		    },
+		  ]
+		},
+		{
+		  name: 'Prismatic Sushi',
+		  description: 'Consommer un Prismatic Sushi donne 4 points de faim, 2,4 points de saturation et l\'effet Health Boost pendant 40 secondes.',
+		  icon: '/icons/stellarity/food/prismatic_sushi.png',
+		  obtention: [
+		    {
+		      type: ObtentionType.CRAFTER,
+		      crafterName: 'Cauldron Crafting',
+		      crafterIcon: '/icons/stellarity/block/cauldron_crafting.png',
+		      crafterIngredients: [
+		        { name: 'Prismite', quantity: 1 },
+		        { name: 'Dried Kelp', quantity: 1 },
+		      ]
+		    },
+		  ]
+		},
 	],
+
+	potions: [
+		{
+			name: 'Chorus Juice',
+			description: 'Consommer un Chorus Juice donne Vitesse I et Saut amélioré I pendant 50 secondes.',
+			bonus: 'Vitesse I et Saut amélioré I pendant 50 secondes.',
+			obtention: [
+				{
+					type: ObtentionType.CRAFTER,
+					crafterName: 'Cauldron Crafting',
+					crafterIcon: '/icons/stellarity/block/cauldron_crafting.png',
+					crafterIngredients: [
+						{ name: 'Chorus Fruit', quantity: 2 },
+						{ name: 'Bottle', quantity: 1 },
+					]
+				},
+			]
+		},
+		{
+			name: 'Blind Rage Potion',
+			description: 'Consommer une Blind Rage Potion donne Force III et Obscurité pendant 15 secondes.',
+			bonus: 'Force III pendant 15s.',
+			malus: 'Obscurité I pendant 15s.',
+			obtention: [
+				{
+					type: ObtentionType.CRAFTER,
+					crafterName: 'Cauldron Crafting',
+					crafterIcon: '/icons/stellarity/block/cauldron_crafting.png',
+					crafterIngredients: [
+						{ name: 'Fleshy Piranha', quantity: 1 },
+						{ name: 'Glowstone Dust', quantity: 1 },
+						{ name: 'Glass Bottle', quantity: 1 },
+						{ name: 'Nether Wart', quantity: 1 },
+					]
+				},
+			]
+		},
+		{
+			name: 'Blind Rage Potion Extra Time',
+			description: 'Consommer une Blind Rage Potion Extra Time donne Force III et Obscurité pendant 22 secondes.',
+			bonus: 'Force III pendant 22s.',
+			malus: 'Obscurité I pendant 22s.',
+			obtention: [
+				{
+					type: ObtentionType.CRAFTER,
+					crafterName: 'Cauldron Crafting',
+					crafterIcon: '/icons/stellarity/block/cauldron_crafting.png',
+					crafterIngredients: [
+						{ name: 'Blind Rage Potion', quantity: 1 },
+						{ name: 'Redstone Dust', quantity: 1 },
+					]
+				},
+			]
+		},
+		{
+			name: 'Endurance Potion',
+			description: 'Consommer une Endurance Potion donne Résistance I pendant 2 minutes.',
+			bonus: 'Résistance I pendant 2 minutes.',
+			obtention: [
+				{
+					type: ObtentionType.CRAFTER,
+					crafterName: 'Cauldron Crafting',
+					crafterIcon: '/icons/stellarity/block/cauldron_crafting.png',
+					crafterIngredients: [
+						{ name: 'Nether Wart', quantity: 1 },
+						{ name: 'Glass Bottle', quantity: 1 },
+						{ name: 'Iron Ingot', quantity: 1 },
+						{ name: 'Popped Chorus Fruit', quantity: 1 },
+					]
+				},
+			]
+		},
+		{
+			name: 'Endurance Potion Extra Time',
+			description: 'Consommer une Endurance Potion Extra Time donne Résistance I pendant 4 minutes.',
+			bonus: 'Résistance I pendant 4 minutes.',
+			obtention: [
+				{
+					type: ObtentionType.CRAFTER,
+					crafterName: 'Cauldron Crafting',
+					crafterIcon: '/icons/stellarity/block/cauldron_crafting.png',
+					crafterIngredients: [
+						{ name: 'Endurance Potion', quantity: 1 },
+						{ name: 'Redstone Dust', quantity: 1 },
+					]
+				},
+			]
+		},
+		{
+			name: 'Endurance Potion II',
+			description: 'Consommer une Endurance Potion II donne Résistance II pendant 1 minute.',
+			bonus: 'Résistance II pendant 1 minute.',
+			obtention: [
+				{
+					type: ObtentionType.CRAFTER,
+					crafterName: 'Cauldron Crafting',
+					crafterIcon: '/icons/stellarity/block/cauldron_crafting.png',
+					crafterIngredients: [
+						{ name: 'Endurance Potion', quantity: 1 },
+						{ name: 'Glowstone Dust', quantity: 1 },
+					]
+				},
+			]
+		},
+		{
+			name: 'Entanglement Potion',
+			description: 'Consommer une Entanglement Potion donne Lenteur V pendant 11 secondes.',
+			malus: 'Lenteur V pendant 11 secondes.',
+			obtention: [
+				{
+					type: ObtentionType.CRAFTER,
+					crafterName: 'Cauldron Crafting',
+					crafterIcon: '/icons/stellarity/block/cauldron_crafting.png',
+					crafterIngredients: [
+						{ name: 'Nether Wart', quantity: 1 },
+						{ name: 'Glass Bottle', quantity: 1 },
+						{ name: 'Overgrown Cod', quantity: 1 },
+						{ name: 'Gunpowder', quantity: 1 },
+					]
+				},
+			]
+		},
+		{
+			name: 'Entanglement Potion Extra Time',
+			description: 'Consommer une Entanglement Potion Extra Time donne Lenteur V pendant 14 secondes.',
+			malus: 'Lenteur V pendant 14 secondes.',
+			obtention: [
+				{
+					type: ObtentionType.CRAFTER,
+					crafterName: 'Cauldron Crafting',
+					crafterIcon: '/icons/stellarity/block/cauldron_crafting.png',
+					crafterIngredients: [
+						{ name: 'Entanglement Potion', quantity: 1 },
+						{ name: 'Redstone Dust', quantity: 1 },
+					]
+				},
+			]
+		},
+		{
+			name: 'Entanglement Potion II',
+			description: 'Consommer une Entanglement Potion II donne Lenteur VI pendant 8 secondes.',
+			malus: 'Lenteur VI pendant 8 secondes.',
+			obtention: [
+				{
+					type: ObtentionType.CRAFTER,
+					crafterName: 'Cauldron Crafting',
+					crafterIcon: '/icons/stellarity/block/cauldron_crafting.png',
+					crafterIngredients: [
+						{ name: 'Entanglement Potion', quantity: 1 },
+						{ name: 'Glowstone Dust', quantity: 1 },
+					]
+				},
+			]
+		},
+	]
 };
 
 export default stellarityContent;
