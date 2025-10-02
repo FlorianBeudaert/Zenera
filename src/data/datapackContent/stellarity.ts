@@ -37,7 +37,7 @@ export type DatapackContent = {
 	armes?: Item[];
 	armures?: Item[];
 	biomes?: Item[];
-	food?: Item[];
+	nourritures?: Item[];
 	potions?: Item[];
 };
 
@@ -661,7 +661,7 @@ const stellarityContent: DatapackContent = {
 		},
 	],
 
-	food: [
+	nourritures: [
 		{
 			name: 'Chorus Stew',
 			description: 'Consommer un Chorus Stew donne 6 points de faim et 7,2 points de saturation.',
@@ -1005,6 +1005,182 @@ const stellarityContent: DatapackContent = {
 				},
 			]
 		},
+		{
+		  name: 'Frost Cloud Potion',
+		  description: 'Effet à définir.',
+		  obtention: [
+		    {
+		      type: ObtentionType.CRAFTER,
+		      crafterName: 'Cauldron Crafting',
+		      crafterIcon: '/icons/stellarity/block/cauldron_crafting.png',
+		      crafterIngredients: [
+		        { name: 'Nether Wart', quantity: 1 },
+		        { name: 'Glass Bottle', quantity: 1 },
+		        { name: 'Frost Minnow', quantity: 1 },
+		        { name: 'Packed Ice', quantity: 3 },
+		      ]
+		    },
+		  ]
+		},
+		{
+		  name: 'Hellfire Treader Potion',
+		  description: 'Effet à définir.',
+		  obtention: [
+		    {
+		      type: ObtentionType.CRAFTER,
+		      crafterName: 'Cauldron Crafting',
+		      crafterIcon: '/icons/stellarity/block/cauldron_crafting.png',
+		      crafterIngredients: [
+		        { name: 'Flarefin Koi', quantity: 1 },
+		        { name: 'Glass Bottle', quantity: 1 },
+		        { name: 'Sugar', quantity: 1 },
+		        { name: 'Nether Wart', quantity: 1 },
+		      ]
+		    },
+		  ]
+		},
+		{
+		  name: 'Hellfire Treader Potion Extra Time',
+		  description: 'Effet à définir.',
+		  obtention: [
+		    {
+		      type: ObtentionType.CRAFTER,
+		      crafterName: 'Cauldron Crafting',
+		      crafterIcon: '/icons/stellarity/block/cauldron_crafting.png',
+		      crafterIngredients: [
+		        { name: 'Hellfire Treader Potion', quantity: 1 },
+		        { name: 'Redstone Dust', quantity: 1 },
+		      ]
+		    },
+		  ]
+		},
+		{
+		  name: 'Hellfire Treader Potion II',
+		  description: 'Effet à définir.',
+		  obtention: [
+		    {
+		      type: ObtentionType.CRAFTER,
+		      crafterName: 'Cauldron Crafting',
+		      crafterIcon: '/icons/stellarity/block/cauldron_crafting.png',
+		      crafterIngredients: [
+		        { name: 'Hellfire Treader Potion', quantity: 1 },
+		        { name: 'Glowstone Dust', quantity: 1 },
+		      ]
+		    },
+		  ]
+		},
+		{
+		  name: 'Lifeforce Potion',
+		  description: 'Effet à définir.',
+		  obtention: [
+		    {
+		      type: ObtentionType.CRAFTER,
+		      crafterName: 'Cauldron Crafting',
+		      crafterIcon: '/icons/stellarity/block/cauldron_crafting.png',
+		      crafterIngredients: [
+		        { name: 'Nether Wart', quantity: 1 },
+		        { name: 'Glass Bottle', quantity: 1 },
+		        { name: 'Prismite', quantity: 1 },
+		        { name: 'Starlight Soot', quantity: 1 },
+		      ]
+		    },
+		  ]
+		},
+		{
+		  name: 'Lifeforce Potion Extra Time',
+		  description: 'Effet à définir.',
+		  obtention: [
+		    {
+		      type: ObtentionType.CRAFTER,
+		      crafterName: 'Cauldron Crafting',
+		      crafterIcon: '/icons/stellarity/block/cauldron_crafting.png',
+		      crafterIngredients: [
+		        { name: 'Lifeforce Potion', quantity: 1 },
+		        { name: 'Redstone Dust', quantity: 1 },
+		      ]
+		    },
+		  ]
+		},
+		{
+		  name: 'Lifeforce Potion II',
+		  description: 'Effet à définir.',
+		  obtention: [
+		    {
+		      type: ObtentionType.CRAFTER,
+		      crafterName: 'Cauldron Crafting',
+		      crafterIcon: '/icons/stellarity/block/cauldron_crafting.png',
+		      crafterIngredients: [
+		        { name: 'Lifeforce Potion', quantity: 1 },
+		        { name: 'Glowstone Dust', quantity: 1 },
+		      ]
+		    },
+		  ]
+		},
+		{
+		  name: 'Spelunker Potion',
+		  description: 'Effet à définir.',
+		  obtention: [
+		    {
+		      type: ObtentionType.CRAFTER,
+		      crafterName: 'Cauldron Crafting',
+		      crafterIcon: '/icons/stellarity/block/cauldron_crafting.png',
+		      crafterIngredients: [
+		        { name: 'Red/Brown Mushroom', quantity: 1 },
+		        { name: 'Nether Wart', quantity: 1 },
+		        { name: 'Glass Bottle', quantity: 1 },
+		        { name: 'Gold Ingot', quantity: 1 },
+		      ]
+		    },
+		  ]
+		},
+		{
+		  name: 'Spelunker Potion Extra Time',
+		  description: 'Effet à définir.',
+		  obtention: [
+		    {
+		      type: ObtentionType.CRAFTER,
+		      crafterName: 'Cauldron Crafting',
+		      crafterIcon: '/icons/stellarity/block/cauldron_crafting.png',
+		      crafterIngredients: [
+		        { name: 'Spelunker Potion', quantity: 1 },
+		        { name: 'Redstone Dust', quantity: 1 },
+		      ]
+		    },
+		  ]
+		},
+		{
+		  name: 'Spelunker Potion II',
+		  description: 'Effet à définir.',
+		  obtention: [
+		    {
+		      type: ObtentionType.CRAFTER,
+		      crafterName: 'Cauldron Crafting',
+		      crafterIcon: '/icons/stellarity/block/cauldron_crafting.png',
+		      crafterIngredients: [
+		        { name: 'Spelunker Potion', quantity: 1 },
+		        { name: 'Glowstone Dust', quantity: 1 },
+		      ]
+		    },
+		  ]
+		},
+		{
+		  name: 'Luck Potion',
+		  description: 'Effet à définir.',
+		  obtention: [
+		    {
+		      type: ObtentionType.CRAFTER,
+		      crafterName: 'Cauldron Crafting',
+		      crafterIcon: '/icons/stellarity/block/cauldron_crafting.png',
+		      crafterIngredients: [
+		        { name: 'Nether Wart', quantity: 1 },
+		        { name: 'Glass Bottle', quantity: 1 },
+		        { name: 'Short Grass', quantity: 2 },
+		        { name: 'Diamond', quantity: 1 },
+		      ]
+		    },
+		  ]
+		},
+		// ]
 	]
 };
 
