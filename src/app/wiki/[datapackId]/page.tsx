@@ -2,8 +2,8 @@
 
 import React, { useState, useMemo } from 'react';
 import { notFound } from 'next/navigation';
-import { ObtentionType } from '@/data/datapackContent/stellarity';
 import stellarityContent from '@/data/datapackContent/stellarity';
+import { ObtentionType } from '@/data/datapackTypes';
 import { datapacks } from '@/data/datapacks';
 import { Skull, Swords, MapPin, FlaskConical, Award, BookOpen } from 'lucide-react';
 import { SearchBar } from '@/components/SearchBar';
