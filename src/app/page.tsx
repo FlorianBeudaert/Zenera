@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { Book, Sparkles, Download } from 'lucide-react';
 
 const stats = [
@@ -29,10 +30,13 @@ export default function Home() {
               <Book className="w-5 h-5 mr-2" />
               Explorer le wiki
             </a>
-            <a className="bg-gradient-to-r from-primary to-primary-hover text-white font-semibold py-3 px-6 rounded-lg shadow-md hover:shadow-lg transition-shadow flex items-center justify-center" href="#">
-              <Sparkles className="w-5 h-5 mr-2" />
-              Télécharger le launcher
-            </a>
+						<Link
+							className="bg-gradient-to-r from-primary to-primary-hover text-white font-semibold py-3 px-6 rounded-lg shadow-md hover:shadow-lg transition-shadow flex items-center justify-center"
+							href="/download"
+						>
+							<Sparkles className="w-5 h-5 mr-2" />
+							Télécharger le launcher
+						</Link>
           </div>
         </div>
       </section>
@@ -77,10 +81,13 @@ export default function Home() {
               Launcher en version crackée
             </li>
           </ul>
-          <a className="bg-gradient-to-r from-primary to-primary-hover text-white font-semibold py-3 px-6 rounded-lg shadow-md hover:shadow-lg transition-shadow inline-flex items-center" href="#">
-            <Download className="w-5 h-5 mr-2" />
-            Télécharger le launcher
-          </a>
+					<Link
+						className="bg-gradient-to-r from-primary to-primary-hover text-white font-semibold py-3 px-6 rounded-lg shadow-md hover:shadow-lg transition-shadow inline-flex items-center"
+						href="/download"
+					>
+						<Download className="w-5 h-5 mr-2" />
+						Télécharger le launcher
+					</Link>
         </div>
       </section>
     </div>

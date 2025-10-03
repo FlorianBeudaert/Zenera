@@ -5,7 +5,7 @@ import { Book, Menu } from 'lucide-react';
 const navLinks = [
   { href: '/', label: 'Accueil' },
   { href: '/wiki', label: 'Wiki' },
-  { href: '/launcher', label: 'Launcher' },
+  { href: '/download', label: 'Launcher' },
 ];
 
 export default function Header() {
