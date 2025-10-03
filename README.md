@@ -1,36 +1,99 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Zenera
 
-## Getting Started
+Zenera est un site web Next.js permettant de documenter, explorer et configurer des datapacks Minecraft personnalisés, comme Stellarity. Il propose une interface moderne pour consulter les objets, armes, armures, nourritures, potions, etc. de chaque datapack, avec leurs recettes et méthodes d'obtention.
 
-First, run the development server:
+## Prérequis
+
+- Node.js 18 ou plus (https://nodejs.org/)
+- npm (installé avec Node.js)
+
+## Installation
+
+1. Clonez le dépôt ou placez-vous dans le dossier du projet.
+2. Installez les dépendances :
+
+```bash
+npm install
+```
+
+## Lancement en développement
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Le site sera accessible sur http://localhost:3000
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Lancer en production
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm start
+```
 
-## Learn More
+## Structure du projet
 
-To learn more about Next.js, take a look at the following resources:
+- `src/data/datapacks.ts` : liste des datapacks disponibles (id, nom, description)
+- `src/data/datapackTypes.ts` : types TypeScript pour structurer les contenus (items, armes, etc.)
+- `src/data/datapackContent/` : dossier contenant les contenus détaillés de chaque datapack (ex : `stellarity.ts`)
+- `public/icons/` : icônes et images utilisées pour les items, armes, etc.
+- `src/components/` : composants React réutilisables (Header, Footer, SearchBar...)
+- `src/app/` : pages Next.js (dont la page wiki)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Ajouter ou modifier un datapack
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. Ajoutez une entrée dans `src/data/datapacks.ts` avec un nouvel id, nom et description.
+2. Créez un fichier dans `src/data/datapackContent/` (ex : `nouveauDatapack.ts`) qui exporte un objet conforme au type `DatapackContent`.
+3. Ajoutez les fichiers détaillés (items, armes, etc.) dans un sous-dossier si besoin (voir exemple `stellarity/`).
+4. Ajoutez les icônes correspondantes dans `public/icons/`.
+5. Importez et référencez le contenu dans le fichier principal du datapack.
 
-## Deploy on Vercel
+## Exemple de structure d'un item
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```typescript
+{
+  name: 'Chorus Plating',
+  description: 'Matériel utile pour la fabrication de certains objets.',
+  icon: '/icons/stellarity/items/chorus_plating.png',
+  obtention: [
+    {
+      type: ObtentionType.CRAFTER,
+      crafterName: 'Altar Of The Accursed',
+      crafterIcon: '/icons/stellarity/block/altar_of_the_accursed.png',
+      crafterIngredients: [
+        { name: 'Iron Ingot', quantity: 1 },
+        { name: 'Popped chorus fruit', quantity: 2 },
+      ]
+    },
+    { type: ObtentionType.DONJON_REWARD }
+  ]
+}
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Déploiement
+
+Le projet peut être déployé sur Vercel, Netlify ou tout hébergeur supportant Next.js.
+
+- Pour Vercel :
+  1. Poussez le code sur GitHub.
+  2. Connectez le repo sur https://vercel.com/ et suivez les instructions.
+
+## FAQ
+
+**Comment ajouter une image d'item ?**
+Placez l'image dans `public/icons/[nomDatapack]/[type]/` et référencez-la dans le champ `icon` de l'item.
+
+**Comment ajouter un nouveau type de contenu ?**
+Ajoutez le type dans `DatapackContent` et créez le fichier correspondant dans le dossier du datapack.
+
+**Comment contribuer ?**
+En me faisant des retours sur les fonctionnalités, en signalant des bugs ou en proposant des améliorations.
+
+## Liens utiles
+- [Documentation Next.js](https://nextjs.org/docs)
+- [TypeScript](https://www.typescriptlang.org/)
+- [TailwindCSS](https://tailwindcss.com/)
+
+---
+
+Pour toute question, contactez moi via Discord : **starwolf5000**
