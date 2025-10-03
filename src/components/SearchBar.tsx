@@ -23,8 +23,15 @@ export function SearchBar({
       />
       <button
         type="button"
-        onClick={onFilterClick}
-        className={`p-2 rounded-full transition-colors ${filterActive ? 'bg-primary/10' : ''}`}
+        data-filter-button="1"
+        onMouseDown={e => {
+          e.stopPropagation();
+        }}
+        onClick={e => {
+          e.stopPropagation();
+          onFilterClick();
+        }}
+        className={`p-2 rounded-full transition-colors ${filterActive ? 'bg-primary/10' : ''} hover:bg-primary/10`}
         aria-label="Ouvrir les filtres"
       >
         <Filter className={`w-5 h-5 ${filterActive ? 'text-primary' : 'text-gray-500'}`} />
