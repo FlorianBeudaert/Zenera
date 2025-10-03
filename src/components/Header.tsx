@@ -43,13 +43,13 @@ export default function Header() {
                             <Menu className="w-6 h-6" />
                         </button>
                         {menuOpen && (
-                            <div className="absolute top-16 right-4 bg-white border rounded-md shadow-lg w-48">
-                                <nav className="flex flex-col">
+                            <div className="absolute top-16 right-4 bg-white/95 backdrop-blur-sm border border-gray-200 rounded-xl shadow-xl w-52 overflow-hidden">
+                                <nav className="flex flex-col py-2">
                                     {navLinks.map(link => (
                                         <a
                                             key={link.href}
                                             href={link.href}
-                                            className="px-4 py-2 text-gray-600 hover:text-primary hover:bg-gray-100 transition-colors"
+                                            className="px-6 py-3 text-gray-700 hover:text-primary hover:bg-primary/5 transition-all duration-200 font-medium"
                                             onClick={() => setMenuOpen(false)}
                                         >
                                             {link.label}

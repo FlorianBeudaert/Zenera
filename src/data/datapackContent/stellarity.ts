@@ -855,8 +855,9 @@ const stellarityContent: DatapackContent = {
 	potions: [
 		{
 			name: 'Chorus Juice',
-			description: 'Consommer un Chorus Juice donne Vitesse I et Saut amélioré I pendant 50 secondes.',
+			description: 'Boire un Chorus Juice donne Vitesse I et Saut amélioré I pendant 50 secondes.',
 			bonus: 'Vitesse I et Saut amélioré I pendant 50 secondes.',
+			icon: '/icons/vanilla/potions/water_bottle.png',
 			obtention: [
 				{
 					type: ObtentionType.CRAFTER,
@@ -871,9 +872,10 @@ const stellarityContent: DatapackContent = {
 		},
 		{
 			name: 'Blind Rage Potion',
-			description: 'Consommer une Blind Rage Potion donne Force III et Obscurité pendant 15 secondes.',
+			description: 'Boire une Blind Rage Potion donne Force III et Obscurité pendant 15 secondes.',
 			bonus: 'Force III pendant 15s.',
 			malus: 'Obscurité I pendant 15s.',
+			icon: '/icons/vanilla/potions/water_bottle.png',
 			obtention: [
 				{
 					type: ObtentionType.CRAFTER,
@@ -890,9 +892,10 @@ const stellarityContent: DatapackContent = {
 		},
 		{
 			name: 'Blind Rage Potion Extra Time',
-			description: 'Consommer une Blind Rage Potion Extra Time donne Force III et Obscurité pendant 22 secondes.',
+			description: 'Boire une Blind Rage Potion Extra Time donne Force III et Obscurité pendant 22 secondes.',
 			bonus: 'Force III pendant 22s.',
 			malus: 'Obscurité I pendant 22s.',
+			icon: '/icons/vanilla/potions/water_bottle.png',
 			obtention: [
 				{
 					type: ObtentionType.CRAFTER,
@@ -907,8 +910,9 @@ const stellarityContent: DatapackContent = {
 		},
 		{
 			name: 'Endurance Potion',
-			description: 'Consommer une Endurance Potion donne Résistance I pendant 2 minutes.',
+			description: 'Boire une Endurance Potion donne Résistance I pendant 2 minutes.',
 			bonus: 'Résistance I pendant 2 minutes.',
+			icon: '/icons/vanilla/potions/water_bottle.png',
 			obtention: [
 				{
 					type: ObtentionType.CRAFTER,
@@ -925,8 +929,9 @@ const stellarityContent: DatapackContent = {
 		},
 		{
 			name: 'Endurance Potion Extra Time',
-			description: 'Consommer une Endurance Potion Extra Time donne Résistance I pendant 4 minutes.',
+			description: 'Boire une Endurance Potion Extra Time donne Résistance I pendant 4 minutes.',
 			bonus: 'Résistance I pendant 4 minutes.',
+			icon: '/icons/vanilla/potions/water_bottle.png',
 			obtention: [
 				{
 					type: ObtentionType.CRAFTER,
@@ -941,8 +946,9 @@ const stellarityContent: DatapackContent = {
 		},
 		{
 			name: 'Endurance Potion II',
-			description: 'Consommer une Endurance Potion II donne Résistance II pendant 1 minute.',
+			description: 'Boire une Endurance Potion II donne Résistance II pendant 1 minute.',
 			bonus: 'Résistance II pendant 1 minute.',
+			icon: '/icons/vanilla/potions/water_bottle.png',
 			obtention: [
 				{
 					type: ObtentionType.CRAFTER,
@@ -957,8 +963,9 @@ const stellarityContent: DatapackContent = {
 		},
 		{
 			name: 'Entanglement Potion',
-			description: 'Consommer une Entanglement Potion donne Lenteur V pendant 11 secondes.',
+			description: 'Jeter une Entanglement Potion donne Lenteur V pendant 11 secondes.',
 			malus: 'Lenteur V pendant 11 secondes.',
+			icon: '/icons/vanilla/potions/splash_water_bottle.png',
 			obtention: [
 				{
 					type: ObtentionType.CRAFTER,
@@ -975,8 +982,9 @@ const stellarityContent: DatapackContent = {
 		},
 		{
 			name: 'Entanglement Potion Extra Time',
-			description: 'Consommer une Entanglement Potion Extra Time donne Lenteur V pendant 14 secondes.',
+			description: 'Jeter une Entanglement Potion Extra Time donne Lenteur V pendant 14 secondes.',
 			malus: 'Lenteur V pendant 14 secondes.',
+			icon: '/icons/vanilla/potions/splash_water_bottle.png',
 			obtention: [
 				{
 					type: ObtentionType.CRAFTER,
@@ -991,8 +999,9 @@ const stellarityContent: DatapackContent = {
 		},
 		{
 			name: 'Entanglement Potion II',
-			description: 'Consommer une Entanglement Potion II donne Lenteur VI pendant 8 secondes.',
+			description: 'Jeter une Entanglement Potion II donne Lenteur VI pendant 8 secondes.',
 			malus: 'Lenteur VI pendant 8 secondes.',
+			icon: '/icons/vanilla/potions/splash_water_bottle.png',
 			obtention: [
 				{
 					type: ObtentionType.CRAFTER,
@@ -1007,7 +1016,9 @@ const stellarityContent: DatapackContent = {
 		},
 		{
 		  name: 'Frost Cloud Potion',
-		  description: 'Effet à définir.',
+		  description: 'Zone de particules empêchant de bouger les entités à l’intérieur.',
+			malus: 'Lenteur dans la zone d’effet.',
+			icon: '/icons/vanilla/potions/lingering_water_bottle.png',
 		  obtention: [
 		    {
 		      type: ObtentionType.CRAFTER,
@@ -1024,7 +1035,9 @@ const stellarityContent: DatapackContent = {
 		},
 		{
 		  name: 'Hellfire Treader Potion',
-		  description: 'Effet à définir.',
+		  description: 'Boire une Hellfire Treader Potion donne Vitesse I et Résistance au feu pendant 4 minutes.',
+		  bonus: 'Vitesse I et Résistance au feu pendant 4 minutes.',
+		  icon: '/icons/vanilla/potions/water_bottle.png',
 		  obtention: [
 		    {
 		      type: ObtentionType.CRAFTER,
@@ -1041,7 +1054,9 @@ const stellarityContent: DatapackContent = {
 		},
 		{
 		  name: 'Hellfire Treader Potion Extra Time',
-		  description: 'Effet à définir.',
+		  description: 'Boire une Hellfire Treader Potion Extra Time donne Vitesse I et Résistance au feu pendant 8 minutes.',
+			bonus: 'Vitesse I et Résistance au feu pendant 8 minutes.',
+		  icon: '/icons/vanilla/potions/water_bottle.png',
 		  obtention: [
 		    {
 		      type: ObtentionType.CRAFTER,
@@ -1056,7 +1071,9 @@ const stellarityContent: DatapackContent = {
 		},
 		{
 		  name: 'Hellfire Treader Potion II',
-		  description: 'Effet à définir.',
+		  description: 'Boire une Hellfire Treader Potion II donne Vitesse II et Résistance au feu pendant 2 minutes.',
+			bonus: 'Vitesse II et Résistance au feu pendant 2 minutes.',
+		  icon: '/icons/vanilla/potions/water_bottle.png',
 		  obtention: [
 		    {
 		      type: ObtentionType.CRAFTER,
@@ -1071,7 +1088,9 @@ const stellarityContent: DatapackContent = {
 		},
 		{
 		  name: 'Lifeforce Potion',
-		  description: 'Effet à définir.',
+		  description: "Boire une Lifeforce Potion donne l'effet Bonus de vie I pendant 3 minutes.",
+		  bonus: 'Bonus de vie I pendant 3 minutes. (+2 cœurs)',
+		  icon: '/icons/vanilla/potions/water_bottle.png',
 		  obtention: [
 		    {
 		      type: ObtentionType.CRAFTER,
@@ -1088,7 +1107,9 @@ const stellarityContent: DatapackContent = {
 		},
 		{
 		  name: 'Lifeforce Potion Extra Time',
-		  description: 'Effet à définir.',
+		  description: 'Boire une Lifeforce Potion Extra Time donne l\'effet Bonus de vie I pendant 6 minutes.',
+		  bonus: 'Bonus de vie I pendant 6 minutes. (+2 cœurs)',
+		  icon: '/icons/vanilla/potions/water_bottle.png',
 		  obtention: [
 		    {
 		      type: ObtentionType.CRAFTER,
@@ -1103,7 +1124,9 @@ const stellarityContent: DatapackContent = {
 		},
 		{
 		  name: 'Lifeforce Potion II',
-		  description: 'Effet à définir.',
+		  description: 'Boire une Lifeforce Potion II donne l\'effet Bonus de vie II pendant 1 minute 30 secondes.',
+		  bonus: 'Bonus de vie II pendant 1 minute 30 secondes. (+4 cœurs)',
+		  icon: '/icons/vanilla/potions/water_bottle.png',
 		  obtention: [
 		    {
 		      type: ObtentionType.CRAFTER,
@@ -1118,7 +1141,9 @@ const stellarityContent: DatapackContent = {
 		},
 		{
 		  name: 'Spelunker Potion',
-		  description: 'Effet à définir.',
+		  description: 'Boire une Spelunker Potion donne Vision nocturne et Célérité I pendant 3 minutes.',
+		  bonus: 'Vision nocturne et Célérité I pendant 3 minutes.',
+		  icon: '/icons/vanilla/potions/water_bottle.png',
 		  obtention: [
 		    {
 		      type: ObtentionType.CRAFTER,
@@ -1135,8 +1160,10 @@ const stellarityContent: DatapackContent = {
 		},
 		{
 		  name: 'Spelunker Potion Extra Time',
-		  description: 'Effet à définir.',
-		  obtention: [
+		  description: 'Boire une Spelunker Potion Extra Time donne Vision nocturne et Célérité pendant 6 minutes.',
+			bonus: 'Vision nocturne et Célérité I pendant 6 minutes.',
+			icon: '/icons/vanilla/potions/water_bottle.png',
+			obtention: [
 		    {
 		      type: ObtentionType.CRAFTER,
 		      crafterName: 'Cauldron Crafting',
@@ -1150,7 +1177,9 @@ const stellarityContent: DatapackContent = {
 		},
 		{
 		  name: 'Spelunker Potion II',
-		  description: 'Effet à définir.',
+		  description: 'Boire une Spelunker Potion II donne Vision nocturne et Célérité II pendant 1 minute 30 secondes.',
+			bonus: 'Vision nocturne et Célérité II pendant 1 minute 30 secondes.',
+		  icon: '/icons/vanilla/potions/water_bottle.png',
 		  obtention: [
 		    {
 		      type: ObtentionType.CRAFTER,
@@ -1165,7 +1194,8 @@ const stellarityContent: DatapackContent = {
 		},
 		{
 		  name: 'Luck Potion',
-		  description: 'Effet à définir.',
+		  description: 'Boire une Luck Potion donne Chance pendant 5 minutes.',
+			bonus: 'Chance pendant 5 minutes.',
 		  obtention: [
 		    {
 		      type: ObtentionType.CRAFTER,
@@ -1180,7 +1210,137 @@ const stellarityContent: DatapackContent = {
 		    },
 		  ]
 		},
-		// ]
+		{
+			name: "Poseidon's Nectar",
+			description: "Boire un Poseidon's Nectar donne Force de conduit, Absorption et Grâce du dauphin pendant 6 minutes 30 secondes.",
+			bonus: 'Force de conduit, Absorption et Grâce du dauphin pendant 6 minutes 30 secondes.',
+			icon: '/icons/vanilla/potions/water_bottle.png',
+			obtention: [
+				{
+					type: ObtentionType.CRAFTER,
+					crafterName: 'Cauldron Crafting',
+					crafterIcon: '/icons/stellarity/block/cauldron_crafting.png',
+					crafterIngredients: [
+						{ name: 'Bubblefish', quantity: 1 },
+						{ name: 'Nautilus Shell', quantity: 1 },
+						{ name: 'Prismarine Shard', quantity: 1 },
+						{ name: 'Honey Bottle', quantity: 1 },
+						{ name: 'Kelp', quantity: 1 },
+					]
+				},
+			]
+		},
+		{
+			name: 'Red Potion',
+			description: 'Buvez cette potion si vous tenez à mourrir...',
+			malus: 'La mort dans les 5 secondes qui suivent.',
+			icon: '/icons/vanilla/potions/water_bottle.png',
+			obtention: [
+				{
+					type: ObtentionType.CRAFTER,
+					crafterName: 'Cauldron Crafting',
+					crafterIcon: '/icons/stellarity/block/cauldron_crafting.png',
+					crafterIngredients: [
+						{ name: 'Wither Rose', quantity: 1 },
+						{ name: 'Wither Skeleton Skull', quantity: 1 },
+						{ name: 'Red Dye', quantity: 1 },
+						{ name: 'Sweet Berries', quantity: 1 },
+						{ name: 'Nether Wart Block', quantity: 1 },
+						{ name: 'Glass Bottle', quantity: 1 },
+					]
+				},
+			]
+		},
+		{
+			name: 'Regeneraga',
+			description: 'Boire une Regeneraga donne Soin instantané II & Régénération III pendant 7 secondes.',
+			bonus: 'Soin instantané II & Régénération III pendant 7 secondes.',
+			icon: '/icons/vanilla/potions/water_bottle.png',
+			obtention: [
+				{
+					type: ObtentionType.CRAFTER,
+					crafterName: 'Cauldron Crafting',
+					crafterIcon: '/icons/stellarity/block/cauldron_crafting.png',
+					crafterIngredients: [
+						{ name: 'Crimson Tigerfish', quantity: 1 },
+						{ name: 'Prismite', quantity: 1 },
+						{ name: 'Glistering Melon Slice', quantity: 1 },
+						{ name: 'Ghast Tear', quantity: 1 },
+						{ name: 'Nether Wart', quantity: 1 },
+						{ name: 'Glass Bottle', quantity: 1 },
+					]
+				},
+			]
+		},
+		{
+			name: 'Regeneraga Extra Time',
+			description: 'Boire une Regeneraga Extra Time donne Soin instantané II & Régénération III pendant 10 secondes.',
+			bonus: 'Soin instantané II & Régénération III pendant 10 secondes.',
+			icon: '/icons/vanilla/potions/water_bottle.png',
+			obtention: [
+				{
+					type: ObtentionType.CRAFTER,
+					crafterName: 'Cauldron Crafting',
+					crafterIcon: '/icons/stellarity/block/cauldron_crafting.png',
+					crafterIngredients: [
+						{ name: 'Regeneraga', quantity: 1 },
+						{ name: 'Redstone Dust', quantity: 1 },
+					]
+				},
+			]
+		},
+		{
+			name: 'Regeneraga II',
+			description: 'Boire une Regeneraga II donne Soin instantané II & Régénération V pendant 3 secondes.',
+			bonus: 'Soin instantané II & Régénération V pendant 3 secondes.',
+			icon: '/icons/vanilla/potions/water_bottle.png',
+			obtention: [
+				{
+					type: ObtentionType.CRAFTER,
+					crafterName: 'Cauldron Crafting',
+					crafterIcon: '/icons/stellarity/block/cauldron_crafting.png',
+					crafterIngredients: [
+						{ name: 'Regeneraga', quantity: 1 },
+						{ name: 'Starlight Soot', quantity: 1 },
+					]
+				},
+			]
+		},
+		{
+			name: 'Royal Jelly',
+			description: 'Une potion divine qui soigne.',
+			bonus: 'Absorption I pendant 1 minute & retire tous les effets négatifs.',
+			icon: '/icons/vanilla/potions/water_bottle.png',
+			obtention: [
+				{
+					type: ObtentionType.CRAFTER,
+					crafterName: 'Cauldron Crafting',
+					crafterIcon: '/icons/stellarity/block/cauldron_crafting.png',
+					crafterIngredients: [
+						{ name: 'Honey Bottle', quantity: 1 },
+						{ name: 'Starlight Soot', quantity: 1 },
+						{ name: 'Amethyst Shard', quantity: 2 },
+					]
+				},
+			]
+		},
+		{
+			name: 'Royal Jelly II',
+			description: 'Une potion divine qui soigne encore plus.',
+			bonus: 'Absorption II pendant 30 secondes & retire tous les effets négatifs.',
+			icon: '/icons/vanilla/potions/water_bottle.png',
+			obtention: [
+				{
+					type: ObtentionType.CRAFTER,
+					crafterName: 'Cauldron Crafting',
+					crafterIcon: '/icons/stellarity/block/cauldron_crafting.png',
+					crafterIngredients: [
+						{ name: 'Royal Jelly', quantity: 1 },
+						{ name: 'Starlight Soot', quantity: 1 },
+					]
+				},
+			]
+		},
 	]
 };
 
