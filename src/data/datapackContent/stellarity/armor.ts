@@ -89,7 +89,8 @@ export const armor: Item[] = [
 				crafterName: 'Altar Of The Accursed',
 				crafterIcon: '/icons/stellarity/block/altar_of_the_accursed.png',
 				crafterIngredients: [
-					{ name: 'Champion Ingot', quantity: 4 },
+					{ name: 'Enderite Smithing Template', quantity: 1 },
+					{ name: 'Chorus Plating', quantity: 4 },
 					{ name: 'Netherite Helmet', quantity: 1 },
 				]
 			}
@@ -107,7 +108,8 @@ export const armor: Item[] = [
 				crafterName: 'Altar Of The Accursed',
 				crafterIcon: '/icons/stellarity/block/altar_of_the_accursed.png',
 				crafterIngredients: [
-					{ name: 'Champion Ingot', quantity: 4 },
+					{ name: 'Enderite Smithing Template', quantity: 1 },
+					{ name: 'Chorus Plating', quantity: 4 },
 					{ name: 'Netherite Chestplate', quantity: 1 },
 				]
 			}
@@ -125,7 +127,8 @@ export const armor: Item[] = [
 				crafterName: 'Altar Of The Accursed',
 				crafterIcon: '/icons/stellarity/block/altar_of_the_accursed.png',
 				crafterIngredients: [
-					{ name: 'Champion Ingot', quantity: 4 },
+					{ name: 'Enderite Smithing Template', quantity: 1 },
+					{ name: 'Chorus Plating', quantity: 4 },
 					{ name: 'Netherite Leggings', quantity: 1 },
 				]
 			}
@@ -143,7 +146,8 @@ export const armor: Item[] = [
 				crafterName: 'Altar Of The Accursed',
 				crafterIcon: '/icons/stellarity/block/altar_of_the_accursed.png',
 				crafterIngredients: [
-					{ name: 'Champion Ingot', quantity: 4 },
+					{ name: 'Enderite Smithing Template', quantity: 1 },
+					{ name: 'Chorus Plating', quantity: 4 },
 					{ name: 'Netherite Boots', quantity: 1 },
 				]
 			}

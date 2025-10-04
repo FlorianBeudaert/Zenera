@@ -304,9 +304,9 @@ Main secondaire: The Beginning: +1 dégât, The End: +5% vitesse.`,
 
 Obtenable auprès de l’Impératrice de la Lumière (30% de chance).
 
-Clic droit : lance le marteau dans les airs, infligeant des dégâts à toutes les entités dans un rayon de 40 blocs avant de revenir au joueur.
+Clic droit: lance le marteau dans les airs, infligeant des dégâts à toutes les entités dans un rayon de 40 blocs avant de revenir au joueur.
 
-Peut aussi être utilisé comme une arme normale : 15 cœurs de dégâts, cooldown de 0,2.
+Peut aussi être utilisé comme une arme normale: 15 cœurs de dégâts, cooldown de 0,2.
 
 La capacité de lancer n’a aucun cooldown.`,
     bonus: `Peut être lancé sans cooldown, dégâts de zone à distance.`,
