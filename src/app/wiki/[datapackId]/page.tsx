@@ -136,14 +136,9 @@ export default function WikiDatapackPage({ params }: { params: Promise<{ datapac
               />
              ) : null}
              <h3 className="text-2xl font-bold text-gray-900 mb-2 text-center">{item.name}</h3>
-             <p className="text-gray-600 text-center mb-3">
-              {item.description?.split('\n').map((line, i) => (
-               <span key={i}>
-                {line}
-                <br />
-               </span>
-              ))}
-             </p>
+							<p className="text-gray-600 text-left mb-3 whitespace-pre-line leading-relaxed">
+								{item.description}
+							</p>
              {item.setbonus && (
               <div className="text-sm text-blue-700 bg-blue-100 rounded px-3 py-1 mb-2 w-full">
                Set complet : {item.setbonus}
@@ -209,12 +204,16 @@ export default function WikiDatapackPage({ params }: { params: Promise<{ datapac
                       </span>
                      </>
                     )}
-                    {src.type === ObtentionType.DONJON_REWARD && (
-                     <>
-                      <Award className="inline-block w-5 h-5 text-yellow-600" />
-                      <span className="ml-1">Récompense de donjon</span>
-                     </>
-                    )}
+										 {src.type === ObtentionType.DONJON_REWARD && (
+											 <>
+												 <Award className="inline-block w-5 h-5 text-yellow-600" />
+												 <span className="ml-1">Récompense de donjon</span>
+												 {src.name && (
+													 <span className="ml-1 text-xs text-gray-500">({src.name})</span>
+												 )}
+											 </>
+										 )}
+
                    </div>
                    {src.type === ObtentionType.CRAFTER && src.crafterIngredients && (
                     <ul className="mt-2 mb-1 text-left text-gray-800 w-full max-w-xs mx-auto">
