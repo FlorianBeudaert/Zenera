@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Zanera Wiki",
+  title: "Zenera Wiki",
   description: "Wiki des datapacks pour la survie Minecraft",
 };
 

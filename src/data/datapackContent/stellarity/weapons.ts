@@ -270,7 +270,7 @@ Main secondaire: The Beginning: +1 dégât, The End: +5% vitesse.`,
       {
         type: ObtentionType.BOSS,
         name: 'Empress of Light (dans l’End ou Overworld de nuit)',
-        chance: '50%'
+        chance: '25%'
       }
     ]
   },
@@ -315,7 +315,7 @@ La capacité de lancer n’a aucun cooldown.`,
     obtention: [
       {
         type: ObtentionType.BOSS,
-        name: 'Empress of Light',
+        name: 'Empress of Light (dans l’End ou Overworld de nuit)',
         chance: '30%'
       }
     ]

@@ -19,7 +19,7 @@ export default function Header() {
             <div className="w-8 h-8 bg-gradient-to-br from-primary to-primary-hover rounded-lg flex items-center justify-center">
               <Book className="w-5 h-5 text-white" />
             </div>
-            <span className="text-xl font-bold">Zanera Wiki</span>
+            <span className="text-xl font-bold">Zenera Wiki</span>
           </div>
           {/* Menu desktop */}
           <nav className="hidden md:flex space-x-6">
