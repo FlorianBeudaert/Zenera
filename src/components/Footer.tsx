@@ -28,7 +28,7 @@ export default function Footer() {
               <div className="w-8 h-8 bg-gradient-to-br from-primary to-primary-hover rounded-lg flex items-center justify-center">
                 <Book className="w-5 h-5 text-white" />
               </div>
-              <span className="text-lg font-bold">Zanera Wiki</span>
+              <span className="text-lg font-bold">Zenera Wiki</span>
             </div>
             <p className="text-gray-400 text-sm max-w-xs">
               Le wiki pour avoir des informations sur les datapacks pour les survie Minecraft des chicken Nuggets.
@@ -55,7 +55,7 @@ export default function Footer() {
           ))}
         </div>
         <div className="border-t border-gray-800 mt-8 pt-4 text-center text-gray-400 text-xs">
-          <p>&copy; {new Date().getFullYear()} Zanera Wiki. Sans droits d’auteur, partage libre</p>
+          <p>&copy; {new Date().getFullYear()} Zenera Wiki. Sans droits d’auteur, partage libre</p>
         </div>
       </div>
     </footer>

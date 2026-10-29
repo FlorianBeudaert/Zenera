@@ -18,7 +18,7 @@ export default function Home() {
           <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-6 leading-tight">
             Bienvenue sur le
             <span className="block text-transparent bg-gradient-to-r from-primary via-secondary to-primary-hover bg-clip-text">
-              Zanera Wiki
+              Zenera Wiki
             </span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-600 mb-8 leading-relaxed max-w-3xl mx-auto">
